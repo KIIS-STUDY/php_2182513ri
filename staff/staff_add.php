@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>ろくまる農園</title>
-   </head>
+        </head>
 <body>
         
         スタッフ追加<br />
