@@ -14,8 +14,8 @@
         $dsn = 'mysql:dbname=shop;host=localhost;charset=utf8';
         $user = 'root';
         $password = '';
-        $dbh = new PDD($dsn,$user,$password);
-        $dbh->setAttribute(PDD::ATTR_ERRMODE,PDD::ERRMODE_EXCEPTION);
+        $dbh = new PDO($dsn,$user,$password);
+        $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
         $sql='SELECT code, name FROM mst_staff WHERE 1';
         $stmt = $dbh->prepare($sql);
@@ -28,7 +28,7 @@
         print '<form method="post" action="staff_branch.php">';
         while (true)
     {
-        $rec = $stmt->fetch(PDD::FETCH_ASSOC);
+        $rec = $stmt->fetch(PDO::FETCH_ASSOC);
     if ($rec==false)
     {
     break;
